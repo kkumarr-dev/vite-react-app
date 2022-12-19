@@ -80,3 +80,21 @@ export interface IUserResponse {
   skip: number;
   limit: number;
 }
+
+export interface IAuthResponse {
+  id: number;
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  image: string;
+  token: string;
+  status: number;
+  message: string;
+}
+
+export interface IAuthRequest {
+  username: string;
+  password: string;
+}

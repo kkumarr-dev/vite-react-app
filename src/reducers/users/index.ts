@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { IActionWithOutPayload, IActionWithpayload, IUserResponse } from "../../types";
+import { IActionWithOutPayload, IActionWithpayload, IUserReducer, IUserResponse } from "../../types";
 
-export interface IUserReducer {
-  isFetching: boolean;
-  user: IUserResponse
-}
 const initialState: IUserReducer = {
   isFetching: false,
   user: {} as IUserResponse
