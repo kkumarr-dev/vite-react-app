@@ -46,13 +46,13 @@ export const Signin = () => {
         <Row className='justify-content-center mt-5'>
           <Col lg={4} md={6} sm={6}>
             <Card className='shadow'>
-              <Card.Title>
+              <Card.Title className='text-center border-bottom'>
                 <h2 className='p-3'>Login</h2>
               </Card.Title>
               <Card.Body>
                 {message ? <Alert variant='danger'>{message}</Alert> : null}
                 <Form noValidate validated={validated} onSubmit={handleSign}>
-                  <Form.Group>
+                  <Form.Group className='mb-4'>
                     <Form.Label>UserName</Form.Label>
                     <Form.Control
                       required
@@ -67,7 +67,7 @@ export const Signin = () => {
                       Enter valid Email
                     </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group>
+                  <Form.Group className='mb-4'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                       required
@@ -82,7 +82,9 @@ export const Signin = () => {
                       Enter Password
                     </Form.Control.Feedback>
                   </Form.Group>
-                  <Button type='submit'>Signin</Button>
+                  <Form.Group className='d-grid mb-4'>
+                    <Button type='submit'>Signin</Button>
+                  </Form.Group>
                 </Form>
               </Card.Body>
             </Card>
