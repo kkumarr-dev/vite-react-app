@@ -1,5 +1,5 @@
 import { PutEffect, takeLatest, put } from "@redux-saga/core/effects";
-import { setUsers } from "../../reducers";
+import { loadUsers, setUsers } from "../../reducers";
 import { userService } from "../../services";
 import { IUser, IUserResponse } from "../../types";
 import { GETUSERS } from "../action-types";
@@ -14,5 +14,5 @@ function* handleUsers(): Generator<Promise<IUserResponse> | PutEffect, void, IUs
 }
 
 export function* takeAllUserActions() {
-  yield takeLatest(GETUSERS, handleUsers)
+  yield takeLatest(loadUsers.type, handleUsers)
 }
